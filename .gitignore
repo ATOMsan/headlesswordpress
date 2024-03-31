@@ -10,4 +10,5 @@ frontend
 .travis.yml
 frontend
 wordpress/*
-!wordpress/wp-content/themes
+!wordpress/wp-content/themes/headlesstheme/*
+!wordpress/.htaccess
