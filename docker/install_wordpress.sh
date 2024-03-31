@@ -54,7 +54,8 @@ wp plugin install --activate --force \
     custom-post-type-ui \
     wp-rest-api-v2-menus \
     jwt-authentication-for-wp-rest-api \
-    /var/www/plugins/*.zip
+    wp-graphql \
+    # /var/www/plugins/*.zip
     # wordpress-importer \
 
 wp term update category 1 --name="Sample Category"
