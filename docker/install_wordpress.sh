@@ -29,9 +29,8 @@ wp core download --force
     --dbuser="$WORDPRESS_DB_USER" \
     --dbpass="$WORDPRESS_DB_PASSWORD"
 
-echo "Adding JWT constants to wp-config.php"
-echo "define('JWT_AUTH_SECRET_KEY', 'your-top-secret-key');" >> wp-config.php
-echo "define('JWT_AUTH_CORS_ENABLE', true);" >> wp-config.php
+wp config set JWT_AUTH_SECRET_KEY 'your-top-secret-key' --type=constant --add
+wp config set JWT_AUTH_CORS_ENABLE true --type=constant --add
 
 wp core install \
     --url="$WORDPRESS_URL" \

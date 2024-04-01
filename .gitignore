@@ -6,9 +6,7 @@ data
 .vscode
 docker/db_data/*
 !docker/db_data/.gitkeep
-frontend
 .travis.yml
-frontend
 wordpress/*
 !wordpress/wp-content
 !wordpress/.htaccess

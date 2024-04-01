@@ -31,3 +31,15 @@ services:
       - ./wordpress:/var/www/html
       - ./docker/install_wordpress.sh:/usr/local/bin/install_wordpress
       - ./docker/plugins:/var/www/plugins
+  frontend:
+      command: bash -c 'npm i && npm start'
+      container_name: frontend
+      expose:
+        - "3000"
+      image: node
+      ports:
+        - "3000:3000"
+      user: node
+      volumes:
+        - ./frontend:/home/node/app
+      working_dir: /home/node/app
