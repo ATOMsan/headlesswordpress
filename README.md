@@ -1,5 +1,7 @@
 ## Install
 
+The build process takes on average 5 minutes!
+
 _Prerequisite:_ Before you begin, you need [Docker](https://www.docker.com) installed. On Linux, you might need to install [docker-compose](https://docs.docker.com/compose/install/#install-compose) separately.
 
 Docker Compose builds and starts four containers by default: `db-headless`, `wp-headless`, `frontend`:
@@ -7,6 +9,10 @@ Docker Compose builds and starts four containers by default: `db-headless`, `wp-
     docker-compose up -d
 
 **Wait a few minutes** for Docker to build the services for the first time. After the initial build, startup should only take a few seconds.
+
+Stops containers and removes containers, networks, volumes, and images created by (docker-compose up):
+
+    docker-compose down
 
 You can follow the Docker output to see build progress and logs:
 

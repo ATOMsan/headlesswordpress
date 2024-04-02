@@ -32,7 +32,7 @@ services:
       - ./docker/install_wordpress.sh:/usr/local/bin/install_wordpress
       - ./docker/plugins:/var/www/plugins
   frontend:
-      command: bash -c 'npm i && npm start'
+      command: bash -c 'npm i && npm run start'
       container_name: frontend
       expose:
         - "3000"
