@@ -32,11 +32,19 @@ export const Form: React.FC<FormProps> = ({ apiMethod }) => {
     }
     try {
       const response = await apiMethod(config)
-      toast.success('Post Is Created')
+      if (response?.name === 'AxiosError') {
+        toast.error(
+          response?.message
+            ? response?.message
+            : 'Something Whent Wrong, try again next time!'
+        )
+      } else {
+        toast.success('Post Is Created')
+        reset()
+      }
     } catch (error) {
       toast.error('Error Creating Post')
     }
-    reset()
   }
 
   const {
